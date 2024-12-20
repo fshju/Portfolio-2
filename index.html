@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Portfolio</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Navigation */
+      .navbar {
+        background: #2c3e50;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #3498db;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        background: linear-gradient(135deg, #3498db, #2c3e50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #e74c3c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .cta-button:hover {
+        background: #c0392b;
+      }
+
+      /* Projects Section */
+      .projects {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .projects h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-img {
+        width: 100%;
+        height: 200px;
+        background: #3498db;
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
+
+      .project-content h3 {
+        margin-bottom: 1rem;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: #f9f9f9;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+
+      .contact h2 {
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .form-group textarea {
+        height: 150px;
+        resize: vertical;
+      }
+
+      /* Footer */
+      .footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .projects {
+          padding: 3rem 1rem;
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .projects h2,
+        .contact h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+          I create beautiful and functional websites that help businesses grow
+          online.
+        </p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <a href="http://figma-hackathon-tan-psi.vercel.app">
+            <img
+              src="images/3.jpg"
+              class="project-img"
+              style="height: 200px; object-fit: cover; width: 100%"
+          /></a>
+          <div class="project-content">
+            <h3>Project One</h3>
+            <p>
+              A modern e-commerce platform built with the latest web
+              technologies.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="http://e-commerce-indol-mu-21.vercel.app">
+            <img
+              src="images/2.jpg"
+              class="project-img"
+              style="height: 200px; object-fit: cover; width: 100%"
+          /></a>
+          <div class="project-content">
+            <h3>Project Two</h3>
+            <p>A responsive blog platform with dynamic content management.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="https://my-portfolio-pink-psi-84.vercel.app/">
+            <img
+              src="images/1.jpg"
+              class="project-img"
+              style="height: 200px; object-fit: cover; width: 100%"
+          /></a>
+
+          <div class="project-content">
+            <h3>Project Three</h3>
+            <p>An interactive dashboard for data visualization.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="https://milestone1-phi-eight.vercel.app/">
+            <img
+              src="images/4.jpg"
+              class="project-img"
+              style="height: 200px; object-fit: cover; width: 100%"
+          /></a>
+
+          <div class="project-content">
+            <h3>Project Four</h3>
+            <p>An interactive Resume.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="https://milestones5-dusky.vercel.app/">
+            <img
+              src="images/5.jpg"
+              class="project-img"
+              style="height: 200px; object-fit: cover; width: 100%"
+          /></a>
+
+          <div class="project-content">
+            <h3>Project Five</h3>
+            <p>An interactive Resume builder.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="#">
+            <img
+              src="images/6.png"
+              class="project-img"
+              style="height: 200px; object-fit: cover; width: 100%"
+          /></a>
+
+          <div class="project-content">
+            <h3>Project Six</h3>
+            <p>My Portfolio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in Touch</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
